@@ -12,7 +12,7 @@ public class BFS {
         boolean visited[] = new boolean[V];
 
         // Create a queue for BFS
-        LinkedList<Integer> queue = new LinkedList<Integer>();
+        LinkedList<Integer> queue = new LinkedList();
 
         // Mark the current node as visited and enqueue it
         visited[s]=true;
