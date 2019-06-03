@@ -2,10 +2,11 @@ public class Dijkstra {
 
     //Grapg represented as 2D array;
 
-    private static final int V=9;
+    private static final int V = 9;
 
     private static void dijkstra(int graph[][], int src) {
-        int dist[] = new int[V]; // The output array. dist[i] will hold
+        int dist[] = new int[V];
+        // The output array. dist[i] will hold
         // the shortest distance from src to i
 
         // sptSet[i] will true if vertex i is included in shortest
@@ -48,11 +49,10 @@ public class Dijkstra {
 
     private static int minDistance(int[] dist, Boolean[] sptSet) {
         // Initialize min value
-        int min = Integer.MAX_VALUE, min_index=-1;
+        int min = Integer.MAX_VALUE, min_index = -1;
 
         for (int v = 0; v < V; v++)
-            if (sptSet[v] == false && dist[v] <= min)
-            {
+            if (sptSet[v] == false && dist[v] <= min) {
                 min = dist[v];
                 min_index = v;
             }
@@ -60,8 +60,7 @@ public class Dijkstra {
         return min_index;
     }
 
-    public static void main (String[] args)
-    {
+    public static void main(String[] args) {
         int graph[][] = new int[][]{{0, 4, 0, 0, 0, 0, 0, 8, 0},
                 {4, 0, 8, 0, 0, 0, 0, 11, 0},
                 {0, 8, 0, 7, 0, 4, 0, 0, 2},
